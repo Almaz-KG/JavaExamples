@@ -55,13 +55,4 @@ public class EchoReverseTest {
 
         Assert.assertEquals("W", out.toString());
     }
-
-
-
-
-
-
-
-
-
 }
