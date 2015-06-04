@@ -11,7 +11,13 @@ public class PrimeNumber {
         return isPrime(max) ? max : getMaxPrimeNumber(max - 1);
     }
     public static boolean isPrime(int n) {
-        for(int i = 2; i < (n / 2) + 1 ; i++) {
+        if(n == 2)
+            return true;
+
+        if(n % 2 == 0)
+            return false;
+
+        for(int i = 3; i * i <= n; i+=2) {
             if(n % i == 0)
                 return false;
         }
