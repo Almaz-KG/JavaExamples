@@ -1,3 +1,5 @@
 Test Driven Development Examples
 
-All examples taken from "Java Examples in a nutshell" book 2ed.
+All examples taken from Algorithms book 4ed R. Sedgevick
+
+https://waffle.io/Almaz-KG/TDDJavaExamples
