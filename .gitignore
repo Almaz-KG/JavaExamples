@@ -2,6 +2,9 @@
 
 *.iml
 .target/
+ArithmeticParser/target/
+DownloadManager/target/
+SimpleInterpretator/target/
 
 ## Directory-based project format:
 .idea/

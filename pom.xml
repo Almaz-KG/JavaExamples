@@ -12,6 +12,7 @@
         <module>DownloadManager</module>
         <module>ArithmeticParser</module>
         <module>SimpleInterpretator</module>
+        <module>JavaMail</module>
     </modules>
 
 
