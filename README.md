@@ -1,3 +1,3 @@
-# The Art Of Java
+# The art of Java
 Java examples from "The art of java" book
 
