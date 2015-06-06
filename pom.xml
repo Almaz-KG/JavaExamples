@@ -13,7 +13,16 @@
         <module>ArithmeticParser</module>
         <module>SimpleInterpretator</module>
         <module>JavaMail</module>
+        <module>SearchCrawler</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.sciss</groupId>
+            <artifactId>weblaf</artifactId>
+            <version>1.28</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

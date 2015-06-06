@@ -6,6 +6,7 @@ ArithmeticParser/target/
 DownloadManager/target/
 SimpleInterpretator/target/
 JavaMail/target/
+SearchCrawler/target/
 
 ## Directory-based project format:
 .idea/
