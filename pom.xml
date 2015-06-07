@@ -14,6 +14,7 @@
         <module>SimpleInterpretator</module>
         <module>JavaMail</module>
         <module>SearchCrawler</module>
+        <module>MiniBrowser</module>
     </modules>
 
     <dependencies>
