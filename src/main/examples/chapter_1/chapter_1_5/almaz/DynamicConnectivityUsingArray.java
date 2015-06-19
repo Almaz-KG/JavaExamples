@@ -44,13 +44,27 @@ public class DynamicConnectivityUsingArray {
         }
     }
     public boolean isConnected(int a, int b){
-        throw new UnsupportedOperationException();
+        if(a > array.length - 1)
+            return false;
+        if(b > array.length - 1)
+            return false;
+
+        return array[a] == array[b];
     }
     public boolean isConnected(String a, String b){
-        throw new UnsupportedOperationException();
+        try{
+            int a_value = Integer.parseInt(a);
+            int b_value = Integer.parseInt(b);
+
+            return isConnected(a_value, b_value);
+        } catch (NumberFormatException e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return false;
     }
     public int count(){
-        throw new UnsupportedOperationException();
+        return this.array.length;
     }
     public void printHelp(){
         System.out.println("========== HELP ===========");
