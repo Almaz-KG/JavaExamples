@@ -45,8 +45,7 @@ public class DynamicConnectivityTest {
     public void symmetricRelation(){
         DynamicConnectivity dc = new DynamicConnectivity();
         dc.union(new String[]{"1", "2"});
-        dc.union(new String[]{"2", "1"});
-
+        
         Assert.assertTrue(dc.isConnected("1", "2"));
         Assert.assertTrue(dc.isConnected("2", "1"));
         Assert.assertTrue(dc.isConnected("1", "1"));
