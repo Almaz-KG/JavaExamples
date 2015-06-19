@@ -6,10 +6,16 @@ import java.util.*;
  * Created by Almaz on 19.06.2015.
  */
 public class DynamicConnectivity {
-    private static Set<String> objects = new HashSet<>();
-    private static List<Set<String>> links = new ArrayList<>();
+    private Set<String> objects;
+    private List<Set<String>> links;
+
+    public DynamicConnectivity() {
+        this.objects = new HashSet<>();
+        this.links = new ArrayList<>();
+    }
 
     public static void main(String[] args) {
+        DynamicConnectivity dc = new DynamicConnectivity();
         boolean running = true;
 
         Scanner sc = new Scanner(System.in);
@@ -22,16 +28,16 @@ public class DynamicConnectivity {
 
             switch (command[0].toLowerCase()){
                 case "help":
-                    showHelp();
+                    dc.printHelp();
                     break;
                 case "connected" :
-                    System.out.println(isConnected(command[1], command[2]));
+                    System.out.println(dc.isConnected(command[1], command[2]));
                     break;
                 case "union":
-                    union(Arrays.copyOfRange(command, 1, command.length));
+                    dc.union(Arrays.copyOfRange(command, 1, command.length));
                     break;
                 case "count":
-                    System.out.println("Count of elements: " + count());
+                    System.out.println("Count of elements: " + dc.count());
                     break;
                 case "exit":
                     running = false;
@@ -44,7 +50,7 @@ public class DynamicConnectivity {
         } while (running);
     }
 
-    private static void union(String[] strings){
+    public void union(String[] strings){
         if(strings.length == 1)
             union(strings[0]);
         else {
@@ -53,7 +59,7 @@ public class DynamicConnectivity {
             }
         }
     }
-    private static void union(String first){
+    public void union(String first){
         objects.add(first);
 
         boolean isSingle = true;
@@ -69,7 +75,7 @@ public class DynamicConnectivity {
             links.add(set);
         }
     }
-    private static void union(String first, String second) {
+    public void union(String first, String second) {
         if(first == null)
             throw new IllegalArgumentException("First parameter is null");
         if(second == null)
@@ -126,7 +132,7 @@ public class DynamicConnectivity {
         }
 
     }
-    private static boolean isConnected(String first, String second) {
+    public boolean isConnected(String first, String second) {
         if(objects.contains(first) && objects.contains(second)){
             for (Set<String> link : links) {
                 if(link.contains(first) && link.contains(second))
@@ -135,10 +141,10 @@ public class DynamicConnectivity {
         }
         return false;
     }
-    private static int count(){
+    public int count(){
         return objects.size();
     }
-    private static void showHelp(){
+    public void printHelp(){
         System.out.println("========== HELP ===========");
         System.out.println("union param1 ... param_N - for union objects");
         System.out.println("connected param1 param2 - answered is connected param1 and param2");
