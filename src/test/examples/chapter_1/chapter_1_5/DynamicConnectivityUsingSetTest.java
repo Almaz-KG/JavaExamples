@@ -1,6 +1,6 @@
 package examples.chapter_1.chapter_1_5;
 
-import main.examples.chapter_1.chapter_1_5.almaz.DynamicConnectivity;
+import main.examples.chapter_1.chapter_1_5.almaz.DynamicConnectivityUsingSet;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,10 +8,10 @@ import org.junit.Test;
 /**
  * Created by Almaz on 20.06.2015.
  */
-public class DynamicConnectivityTest {
+public class DynamicConnectivityUsingSetTest {
     @Test
     public void transitivityTest1(){
-        DynamicConnectivity dc = new DynamicConnectivity();
+        DynamicConnectivityUsingSet dc = new DynamicConnectivityUsingSet();
         dc.union(new String[]{"1", "2"});
         dc.union(new String[]{"2", "3"});
 
@@ -19,7 +19,7 @@ public class DynamicConnectivityTest {
     }
     @Test
     public void transitivityTest2(){
-        DynamicConnectivity dc = new DynamicConnectivity();
+        DynamicConnectivityUsingSet dc = new DynamicConnectivityUsingSet();
         dc.union(new String[]{"1", "1"});
         dc.union(new String[]{"1", "1"});
 
@@ -27,7 +27,7 @@ public class DynamicConnectivityTest {
     }
     @Test
     public void transitivityTest3(){
-        DynamicConnectivity dc = new DynamicConnectivity();
+        DynamicConnectivityUsingSet dc = new DynamicConnectivityUsingSet();
         dc.union(new String[]{"1", "2"});
         dc.union(new String[]{"3", "4"});
 
@@ -35,7 +35,7 @@ public class DynamicConnectivityTest {
     }
     @Test
     public void reflexiveRelation(){
-        DynamicConnectivity dc = new DynamicConnectivity();
+        DynamicConnectivityUsingSet dc = new DynamicConnectivityUsingSet();
         dc.union(new String[]{"1"});
         dc.union(new String[]{"1"});
 
@@ -43,9 +43,9 @@ public class DynamicConnectivityTest {
     }
     @Test
     public void symmetricRelation(){
-        DynamicConnectivity dc = new DynamicConnectivity();
+        DynamicConnectivityUsingSet dc = new DynamicConnectivityUsingSet();
         dc.union(new String[]{"1", "2"});
-        
+
         Assert.assertTrue(dc.isConnected("1", "2"));
         Assert.assertTrue(dc.isConnected("2", "1"));
         Assert.assertTrue(dc.isConnected("1", "1"));

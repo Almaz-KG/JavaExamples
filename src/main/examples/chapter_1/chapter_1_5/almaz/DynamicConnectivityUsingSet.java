@@ -5,17 +5,15 @@ import java.util.*;
 /**
  * Created by Almaz on 19.06.2015.
  */
-public class DynamicConnectivity {
-    private Set<String> objects;
+public class DynamicConnectivityUsingSet {
     private List<Set<String>> links;
 
-    public DynamicConnectivity() {
-        this.objects = new HashSet<>();
+    public DynamicConnectivityUsingSet() {
         this.links = new ArrayList<>();
     }
 
     public static void main(String[] args) {
-        DynamicConnectivity dc = new DynamicConnectivity();
+        DynamicConnectivityUsingSet dc = new DynamicConnectivityUsingSet();
         boolean running = true;
 
         Scanner sc = new Scanner(System.in);
@@ -60,8 +58,6 @@ public class DynamicConnectivity {
         }
     }
     public void union(String first){
-        objects.add(first);
-
         boolean isSingle = true;
         for (Set<String> link : links) {
             if(link.contains(first)) {
@@ -81,68 +77,54 @@ public class DynamicConnectivity {
         if(second == null)
             throw new IllegalArgumentException("Second parameter is null");
 
-        if(objects.contains(first)){
-            if(objects.contains(second)){
-                Set<String> firstSet = null;
-                Set<String> secondSet = null;
-                for (Set<String> link : links) {
-                    if(link.contains(first)){
-                        firstSet = link;
-                    }
-                    if(link.contains(second))
-                        secondSet = link;
 
-                    if(link.contains(first) && link.contains(second))
-                        return;
+        Set<String> firstSet = null;
+        Set<String> secondSet = null;
+        for (Set<String> link : links) {
+            if (link.contains(first))
+                firstSet = link;
+            if (link.contains(second))
+                secondSet = link;
 
-                    if(secondSet != null && firstSet != null)
-                        break;
-                }
-                firstSet.addAll(secondSet);
-                links.remove(secondSet);
-            } else{
-                for (Set<String> link : links) {
-                    if(link.contains(first)) {
-                        link.add(second);
-                        objects.add(second);
-                        break;
-                    }
-                }
-            }
-        } else {
-            if(objects.contains(second)){
-                for (Set<String> link : links) {
-                    if(link == null)
-                        continue;
-                    if(link.contains(second)){
-                        link.add(first);
-                        objects.add(first);
-                        break;
-                    }
-                };
-            } else {
+            if (firstSet != null && secondSet != null)
+                break;
+        }
+
+        if(firstSet == secondSet && firstSet != null)
+            return;
+        if(firstSet == null) {
+            if(secondSet == null) {
                 Set<String> set = new HashSet<>();
                 set.add(first);
                 set.add(second);
 
                 links.add(set);
-                objects.add(first);
-                objects.add(second);
+            } else {
+                secondSet.add(first);
+            }
+        } else {
+            if(secondSet == null) {
+                firstSet.add(second);
+            } else {
+                firstSet.addAll(secondSet);
+                links.remove(secondSet);
             }
         }
-
     }
     public boolean isConnected(String first, String second) {
-        if(objects.contains(first) && objects.contains(second)){
-            for (Set<String> link : links) {
-                if(link.contains(first) && link.contains(second))
-                    return true;
-            }
+        for (Set<String> link : links) {
+            if(link.contains(first) && link.contains(second))
+                return true;
         }
         return false;
     }
     public int count(){
-        return objects.size();
+        int sum = 0;
+        for (Set<String> link : links) {
+            sum += link.size();
+        }
+
+        return sum;
     }
     public void printHelp(){
         System.out.println("========== HELP ===========");
