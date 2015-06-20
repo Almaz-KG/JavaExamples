@@ -8,7 +8,7 @@ public class DynamicConnectivityQuickUnion extends DynamicConnectivityUsingArray
         super(size);
     }
 
-    private int root(int i){
+    protected int root(int i){
         while(i != array[i])
             i = array[i];
         return i;
