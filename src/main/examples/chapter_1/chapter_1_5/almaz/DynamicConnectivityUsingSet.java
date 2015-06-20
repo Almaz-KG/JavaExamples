@@ -70,7 +70,10 @@ public class DynamicConnectivityUsingSet extends DynamicConnectivity{
             if(secondSet == null) {
                 firstSet.add(second);
             } else {
-                firstSet.addAll(secondSet);
+                if(firstSet.size() > secondSet.size())
+                    firstSet.addAll(secondSet);
+                else
+                    secondSet.addAll(firstSet);
                 links.remove(secondSet);
             }
         }
