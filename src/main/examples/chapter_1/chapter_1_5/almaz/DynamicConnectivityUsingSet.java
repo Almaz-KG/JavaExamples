@@ -5,47 +5,11 @@ import java.util.*;
 /**
  * Created by Almaz on 19.06.2015.
  */
-public class DynamicConnectivityUsingSet {
+public class DynamicConnectivityUsingSet extends DynamicConnectivity{
     private List<Set<String>> links;
 
     public DynamicConnectivityUsingSet() {
         this.links = new ArrayList<>();
-    }
-
-    public static void main(String[] args) {
-        DynamicConnectivityUsingSet dc = new DynamicConnectivityUsingSet();
-        boolean running = true;
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Dynamic connectivity\nPlease enter the command (help)");
-        do{
-            System.out.print("->");
-            String text = sc.nextLine();
-            String[] command = text.split(" ");
-
-            switch (command[0].toLowerCase()){
-                case "help":
-                    dc.printHelp();
-                    break;
-                case "connected" :
-                    System.out.println(dc.isConnected(command[1], command[2]));
-                    break;
-                case "union":
-                    dc.union(Arrays.copyOfRange(command, 1, command.length));
-                    break;
-                case "count":
-                    System.out.println("Count of elements: " + dc.count());
-                    break;
-                case "exit":
-                    running = false;
-                    System.out.println("Exit command entered");
-                    break;
-                default:
-                    System.out.println("Unknown command, enter \"help\" for display commands");
-            }
-
-        } while (running);
     }
 
     public void union(String[] strings){
@@ -126,11 +90,5 @@ public class DynamicConnectivityUsingSet {
 
         return sum;
     }
-    public void printHelp(){
-        System.out.println("========== HELP ===========");
-        System.out.println("union param1 ... param_N - for union objects");
-        System.out.println("connected param1 param2 - answered is connected param1 and param2");
-        System.out.println("count - to display count of element");
-        System.out.println("exit - to exit from program");
-    }
+
 }
