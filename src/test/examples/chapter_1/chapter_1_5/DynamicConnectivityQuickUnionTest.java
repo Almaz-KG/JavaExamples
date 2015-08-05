@@ -1,7 +1,7 @@
 package examples.chapter_1.chapter_1_5;
 
-import main.examples.chapter_1.chapter_1_5.almaz.DynamicConnectivity;
-import main.examples.chapter_1.chapter_1_5.almaz.DynamicConnectivityQuickUnion;
+import examples.chapter_1.chapter_1_5.almaz.DynamicConnectivity;
+import examples.chapter_1.chapter_1_5.almaz.DynamicConnectivityQuickUnion;
 import org.junit.Assert;
 import org.junit.Test;
 

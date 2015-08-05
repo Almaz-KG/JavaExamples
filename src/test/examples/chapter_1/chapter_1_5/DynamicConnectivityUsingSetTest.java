@@ -1,6 +1,6 @@
 package examples.chapter_1.chapter_1_5;
 
-import main.examples.chapter_1.chapter_1_5.almaz.DynamicConnectivityUsingSet;
+import examples.chapter_1.chapter_1_5.almaz.DynamicConnectivityUsingSet;
 import org.junit.Assert;
 import org.junit.Test;
 
