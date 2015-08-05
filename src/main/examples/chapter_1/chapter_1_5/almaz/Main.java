@@ -1,4 +1,4 @@
-package main.examples.chapter_1.chapter_1_5.almaz;
+package examples.chapter_1.chapter_1_5.almaz;
 
 import java.util.Arrays;
 import java.util.Scanner;

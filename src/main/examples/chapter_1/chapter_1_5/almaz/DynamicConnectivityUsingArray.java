@@ -1,4 +1,4 @@
-package main.examples.chapter_1.chapter_1_5.almaz;
+package examples.chapter_1.chapter_1_5.almaz;
 
 /**
  * Created by Almaz on 20.06.2015.

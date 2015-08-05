@@ -1,11 +1,13 @@
-package main.examples.chapter_1.chapter_1_5.almaz;
+package examples.chapter_1.chapter_1_5.almaz;
+
+import examples.chapter_1.chapter_1_5.almaz.DynamicConnectivity;
 
 import java.util.*;
 
 /**
  * Created by Almaz on 19.06.2015.
  */
-public class DynamicConnectivityUsingSet extends DynamicConnectivity{
+public class DynamicConnectivityUsingSet extends DynamicConnectivity {
     private List<Set<String>> links;
 
     public DynamicConnectivityUsingSet() {
