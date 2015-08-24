@@ -1,4 +1,4 @@
-package main.examples.chapter_1;
+package examples.chapter_1;
 
 /**
  * Created by almu0214 on 04.06.2015.

@@ -1,6 +1,6 @@
 package examples.chapter_1;
 
-import main.examples.chapter_1.PrimeNumber;
+
 import org.junit.Assert;
 import org.junit.Test;
 

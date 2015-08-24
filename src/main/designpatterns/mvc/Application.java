@@ -1,6 +1,5 @@
 package designpatterns.mvc;
 
-import designpatterns.mvc.controller.Controller;
 import designpatterns.mvc.controller.ControllerImpl;
 import designpatterns.mvc.model.Model;
 import designpatterns.mvc.model.ModelImpl;
