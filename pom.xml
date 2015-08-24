@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>javaexamples</groupId>
-    <artifactId>chapter-2</artifactId>
+    <artifactId>javaexamples</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
