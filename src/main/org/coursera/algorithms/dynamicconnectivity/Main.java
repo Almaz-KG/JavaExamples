@@ -1,4 +1,4 @@
-package javaexamples.firstchapter;
+package org.coursera.algorithms.dynamicconnectivity;
 
 import org.coursera.algorithms.dynamicconnectivity.DynamicConnectivity;
 import org.coursera.algorithms.dynamicconnectivity.DynamicConnectivityQuickUnion;
