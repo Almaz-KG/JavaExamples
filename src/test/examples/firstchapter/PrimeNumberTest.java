@@ -1,6 +1,7 @@
 package examples.firstchapter;
 
 
+import javaexamples.firstchapter.PrimeNumber;
 import org.junit.Assert;
 import org.junit.Test;
 

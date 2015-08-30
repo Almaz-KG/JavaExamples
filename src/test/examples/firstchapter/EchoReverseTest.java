@@ -1,5 +1,6 @@
 package examples.firstchapter;
 
+import javaexamples.firstchapter.EchoReverse;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

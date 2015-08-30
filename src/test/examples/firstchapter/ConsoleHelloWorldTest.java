@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import examples.firstchapter.HelloWorld;
+import javaexamples.firstchapter.HelloWorld;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

@@ -22,7 +22,7 @@ public class Runner {
             print(beverage);
         }
 
-        System.out.println("---------");
+        System.out.println("--------");
         AbstractBeverage capuccino = new SugarCondiment(new MilkCondiment(new Espresso()));
         print(capuccino);
 
