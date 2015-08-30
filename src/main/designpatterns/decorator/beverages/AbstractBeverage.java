@@ -1,4 +1,4 @@
-package designpatterns.decorator;
+package designpatterns.decorator.beverages;
 
 /**
  * Created by Almaz on 29.08.2015.

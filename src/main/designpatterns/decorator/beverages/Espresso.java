@@ -1,4 +1,6 @@
-package designpatterns.decorator;
+package designpatterns.decorator.beverages;
+
+import designpatterns.decorator.AbstractBeverage;
 
 /**
  * Created by Almaz on 29.08.2015.
