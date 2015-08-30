@@ -1,7 +1,5 @@
 package designpatterns.decorator.beverages;
 
-import designpatterns.decorator.AbstractBeverage;
-
 /**
  * Created by Almaz on 30.08.2015.
  */

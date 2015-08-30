@@ -1,5 +1,9 @@
 package designpatterns.decorator;
 
+import designpatterns.decorator.beverages.AbstractBeverage;
+import designpatterns.decorator.beverages.BlackTea;
+import designpatterns.decorator.beverages.Espresso;
+import designpatterns.decorator.beverages.GreenTea;
 import designpatterns.decorator.decorators.MilkCondiment;
 import designpatterns.decorator.decorators.SugarCondiment;
 
