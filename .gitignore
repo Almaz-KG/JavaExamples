@@ -1,10 +1,22 @@
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
 
-*.iml
+
 target/
 
-## Directory-based project format:
+=======
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
+
+*.iml
+.target/
+ArithmeticParser/target/
+DownloadManager/target/
+SimpleInterpretator/target/
+JavaMail/target/
+SearchCrawler/target/
+MiniBrowser/target/
+
+crawler*.log
 .idea/
 # if you remove the above rule, at least ignore the following:
 
