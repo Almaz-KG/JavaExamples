@@ -6,14 +6,28 @@
 
     <groupId>javaexamples</groupId>
     <artifactId>javaexamples</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <modules>
+        <module>DownloadManager</module>
+        <module>ArithmeticParser</module>
+        <module>SimpleInterpretator</module>
+        <module>JavaMail</module>
+        <module>SearchCrawler</module>
+        <module>MiniBrowser</module>
+    </modules>
+
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>de.sciss</groupId>-->
+            <!--<artifactId>weblaf</artifactId>-->
+            <!--<version>1.28</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
         </dependency>
     </dependencies>
-
 </project>
