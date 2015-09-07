@@ -2,7 +2,24 @@
 =======
 # The art of Java
 Java examples from "The art of java" book
+1. Arithmetic Parser
+2. Download Manager
+3. Java Mail (Not worked)
+4. Minibrowser (Swing & JavaFX)
+5. SearchCrawler
+6. SimpleInterpretator
 
+# Java Design Patterns
+1. Command pattern
+2. Decorator pattern
+3. Factory pattern
+4. Observer pattern
+5. Strategy pattern
+6. MVC pattern
+7. DAO pattern (MySQL DB)
+
+# Coursera Algorithms
+1. Dynamic Connectivity algorithm
 
 # Java Concurrency
 Example 2
