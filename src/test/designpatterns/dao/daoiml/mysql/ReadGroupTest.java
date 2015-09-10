@@ -1,7 +1,7 @@
 package designpatterns.dao.daoiml.mysql;
 
 import designpatterns.dao.daoimpl.DAOFactory;
-import designpatterns.dao.daoimpl.GroupDAO;
+import designpatterns.dao.daoimpl.GenericDAO;
 import designpatterns.dao.daoimpl.mysql.MysqlDAOFactory;
 import designpatterns.dao.entities.Group;
 import org.junit.Assert;
@@ -20,7 +20,7 @@ public class ReadGroupTest {
         List<Group> groupList;
 
         try(Connection connection = factory.getConnection()){
-            GroupDAO dao = factory.getGroupDAO(connection);
+            GenericDAO<Group> dao = factory.getGroupDAO(connection);
             groupList = dao.getAll();
         }
 
