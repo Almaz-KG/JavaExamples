@@ -18,6 +18,7 @@ Java examples from "The art of java" book
 5. Strategy pattern
 6. MVC pattern
 7. DAO pattern (MySQL DB)
+8. Adapter patter
 
 # Coursera Algorithms
 1. Dynamic Connectivity algorithm
