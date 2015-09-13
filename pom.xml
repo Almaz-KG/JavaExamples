@@ -9,15 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <modules>
-        <module>DownloadManager</module>
-        <module>ArithmeticParser</module>
-        <module>SimpleInterpretator</module>
-        <module>JavaMail</module>
-        <module>SearchCrawler</module>
-        <module>MiniBrowser</module>
-    </modules>
-
     <dependencies>
         <!--<dependency>-->
             <!--<groupId>de.sciss</groupId>-->
@@ -40,4 +31,23 @@
             <version>1.4</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>integration-test</id>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <phase>integration-test</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
