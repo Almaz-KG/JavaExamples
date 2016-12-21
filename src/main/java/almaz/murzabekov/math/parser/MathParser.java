@@ -27,13 +27,13 @@ import java.util.*;
 public class MathParser {
     private static String QUIT_COMMAND = "quit";
     private static MathParser parser = new MathParser();
-    private List<BinaryOperatorHandler> handlers = new ArrayList<>();
+    private List<BinaryOperatorParser> handlers = new ArrayList<>();
 
     public MathParser() {
-        handlers.add(new DivideOperatorHandler());
-        handlers.add(new MultiplyOperatorHandler());
-        handlers.add(new MinusOperatorHandler());
-        handlers.add(new PlusOperatorHandler());
+        handlers.add(new DivideOperatorExecutor());
+        handlers.add(new MultiplyOperatorExecutor());
+        handlers.add(new MinusOperatorExecutor());
+        handlers.add(new PlusOperatorExecutor());
 
         Collections.sort(handlers, Collections.reverseOrder());
     }
@@ -42,10 +42,9 @@ public class MathParser {
         try {
             String expr = new String(text);
 
-            for (BinaryOperatorHandler handler : handlers) {
+            for (BinaryOperatorParser handler : handlers) {
                 expr = handler.execute(expr);
             }
-
             return Double.parseDouble(expr);
         } catch (NumberFormatException e) {
             throw new ParseException(e);

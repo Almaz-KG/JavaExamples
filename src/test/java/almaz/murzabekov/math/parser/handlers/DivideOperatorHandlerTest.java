@@ -1,11 +1,12 @@
 package almaz.murzabekov.math.parser.handlers;
 
+import almaz.murzabekov.math.parser.BinaryOperatorParser;
 import almaz.murzabekov.math.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class DivideOperatorHandlerTest {
-    BinaryOperatorHandler handler = new DivideOperatorHandler();
+    BinaryOperatorParser handler = new DivideOperatorExecutor();
     double dmax = Double.MAX_VALUE;
     double dmin = Double.MIN_VALUE;
 

@@ -1,11 +1,13 @@
 package almaz.murzabekov.math.parser.handlers;
 
+import almaz.murzabekov.math.parser.BinaryOperatorParser;
 import almaz.murzabekov.math.parser.ParseException;
 
-public class MultiplyOperatorHandler extends BinaryOperatorHandler{
-    public static final int PRIORITY = 3;
-    public MultiplyOperatorHandler() {
-        super("*", PRIORITY);
+public class PlusOperatorExecutor extends BinaryOperatorParser {
+    public static final int PRIORITY = 1;
+
+    public PlusOperatorExecutor() {
+        super("+", PRIORITY, false);
     }
 
     @Override
@@ -14,7 +16,7 @@ public class MultiplyOperatorHandler extends BinaryOperatorHandler{
             double l = Double.parseDouble(left);
             double r = Double.parseDouble(right);
 
-            return (l * r) + "";
+            return (l + r) + "";
         } catch (NumberFormatException ex){
             throw new ParseException(ex);
         }

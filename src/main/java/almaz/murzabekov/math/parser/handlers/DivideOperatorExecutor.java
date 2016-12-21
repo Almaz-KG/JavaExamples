@@ -1,12 +1,13 @@
 package almaz.murzabekov.math.parser.handlers;
 
+import almaz.murzabekov.math.parser.BinaryOperatorParser;
 import almaz.murzabekov.math.parser.ParseException;
 
-public class DivideOperatorHandler extends BinaryOperatorHandler{
+public class DivideOperatorExecutor extends BinaryOperatorParser {
     public static final int PRIORITY = 3;
 
-    public DivideOperatorHandler() {
-        super("/", PRIORITY);
+    public DivideOperatorExecutor() {
+        super("/", PRIORITY, false);
     }
 
     @Override
